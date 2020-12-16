@@ -1,0 +1,20 @@
+<h1>Edit Student</h1>
+
+<%= form_for @student do |f| %>
+
+    <%= f.label :name, "Student Name" %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :mod, "Mod Number" %>
+    <%= f.number_field :mod %>
+    <br>
+    <%= f.submit %>
+
+<% if flash[:errors_array] %>
+  <% flash[:errors_array].each do |error| %>
+    <p style="color: red;"><%= error %></p>
+  <% end %>
+<% end %>
+
+<% end %>
+
